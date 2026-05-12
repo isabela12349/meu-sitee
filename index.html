@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil | Isabela</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilo rápido para o botão de música flutuante */
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
 
@@ -19,6 +36,14 @@
             <li><a href="#contato">contato</a></li>
         </ul>
     </nav>
+    
+    <!-- Botão de controle da música -->
+    <button id="musicBtn" class="music-control">▶️ Play Música</button>
+
+    <!-- Removido o autoplay para o controle manual funcionar melhor -->
+    <audio id="bgMusic" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
 
     <section id="inicio" class="section-blue">
     <header class="hero">
@@ -26,7 +51,7 @@
             <div class="profile-img">
                 <img src="https://i.pinimg.com/736x/5d/1e/3b/5d1e3b16bbf5e1459f5e2524b96a01b8.jpg" alt="Isabela">
             </div>
-            <h1>Olá, eu sou a <span class="name-highlight">Isabela</span></h1>
+            <h1>_Olá, eu sou a <span class="name-highlight">Isabela_</span></h1>
             <p>Estudante de Desenvolvimento de Sistemas.</p>
         </div>
     </header>
@@ -36,7 +61,7 @@
         <h2>Quem sou eu?</h2>
         <p>Meu nome é Isabela, Tenho 17 anos, moro em Marilia com meus pais e minha irma, tenho dois gatos e um cachorro.
             Gosto de sair com minhas amigas e com meus pais, gosto de ficar vendo tiktok e Instagram.
-            Meu cantor fav é o Hungria, minha serie fav é Teen Wolf, não tenho preferencia em filme fav.</p>
+            Meu cantor fav é o Hungria,musica fav é cama de casal e outras..., minha serie fav é Teen Wolf, não tenho preferencia em filme fav.</p>
     </section>
 
     <!-- Trajetória Acadêmica -->
@@ -44,7 +69,7 @@
         <h2>Trajetória Acadêmica</h2>
         <div class="info-box">
             <p>Sobre: <strong>3º ano do Técnico em Desenvolvimento de Sistemas.</strong></p>
-            <p>Conhecimentos adquiridos: Lógica de programação, Banco de Dados, HTML5, CSS3 e fundamentos de JavaScript. Tenho foco em ficar cada vez melhor nessa area.</p>
+            <p>Conhecimentos adquiridos: Lógica de programação, Banco de Dados, HTML, CSS, SCSS e fundamentos de JavaScript. Tenho foco em ficar cada vez melhor nessa area.</p>
         </div>
     </section>
 
@@ -88,6 +113,22 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Script para fazer o botão funcionar -->
+    <script>
+        const music = document.getElementById('bgMusic');
+        const btn = document.getElementById('musicBtn');
+
+        btn.addEventListener('click', function() {
+            if (music.paused) {
+                music.play();
+                btn.textContent = '⏸️ Pause';
+            } else {
+                music.pause();
+                btn.textContent = '▶️ Play ';
+            }
+        });
+    </script>
 
 </body>
 </html>
