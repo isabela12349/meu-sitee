@@ -4,24 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil | Isabela</title>
+    <!-- Link para o arquivo de estilização externa -->
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Estilo rápido para o botão de música flutuante */
-        .music-control {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-    </style>
 </head>
 <body>
 
@@ -32,36 +16,38 @@
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#trajetoria">Trajetória</a></li>
             <li><a href="#hobbies">Interesses</a></li>
+            <li><a href="#favoritos">Favoritos</a></li>
             <li><a href="#futuro">Objetivos</a></li>
             <li><a href="#contato">contato</a></li>
         </ul>
     </nav>
     
     <!-- Botão de controle da música -->
-    <button id="musicBtn" class="music-control">▶️ Play Música</button>
+    <button id="musicBtn" class="music-control">▶️ Play </button>
 
-    <!-- Removido o autoplay para o controle manual funcionar melhor -->
+    <!-- Áudio de fundo -->
     <audio id="bgMusic" loop>
         <source src="musica.mp3" type="audio/mpeg">
     </audio>
 
     <section id="inicio" class="section-blue">
-    <header class="hero">
-        <div class="hero-content">
-            <div class="profile-img">
-                <img src="https://i.pinimg.com/736x/5d/1e/3b/5d1e3b16bbf5e1459f5e2524b96a01b8.jpg" alt="Isabela">
+        <header class="hero">
+            <div class="hero-content">
+                <div class="profile-img">
+                    <img src="https://i.pinimg.com/736x/5d/1e/3b/5d1e3b16bbf5e1459f5e2524b96a01b8.jpg" alt="Isabela">
+                </div>
+                <h1>_Olá, eu sou a <span class="name-highlight">Isabela_</span></h1>
+                <p>Estudante de Desenvolvimento de Sistemas.</p>
             </div>
-            <h1>_Olá, eu sou a <span class="name-highlight">Isabela_</span></h1>
-            <p>Estudante de Desenvolvimento de Sistemas.</p>
-        </div>
-    </header>
+        </header>
     </section> 
+
     <!-- Apresentação Pessoal -->
     <section id="sobre" class="section-white">
         <h2>Quem sou eu?</h2>
         <p>Meu nome é Isabela, Tenho 17 anos, moro em Marilia com meus pais e minha irma, tenho dois gatos e um cachorro.
             Gosto de sair com minhas amigas e com meus pais, gosto de ficar vendo tiktok e Instagram.
-            Meu cantor fav é o Hungria,musica fav é cama de casal e outras..., minha serie fav é Teen Wolf, não tenho preferencia em filme fav.</p>
+            Meu cantor fav é o Hungria,musica fav é cama de casal, provevelmente e outras..., minha serie fav é Teen Wolf, não tenho preferencia em filme fav.</p>
     </section>
 
     <!-- Trajetória Acadêmica -->
@@ -92,8 +78,59 @@
         </div>
     </section>
 
+    <!-- Seção Favoritos: Filmes, Séries e Músicas apenas Visuais -->
+    <section id="favoritos" class="section-blue">
+        <h2>Meus Favoritos</h2>
+        <div class="skills-grid">
+            <!-- Card de Filmes -->
+            <div class="skill-card">
+                <h3>🎬 Filmes</h3>
+                
+                <div class="media-item">
+                    <img src="https://cinebuzz.com.br/wp-content/uploads/atraves-da-minha-janela-netflix-anuncia-que-gravacoes-da-sequencia-ja-comecaram.jpg" alt="Através da Minha Janela">
+                    <span>Através da Minha Janela</span>
+                </div>
+
+                <div class="media-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSO35cxXLkJjFxVvhSQMcz2q6c_6x85ngoDA&s" alt="After">
+                    <span>After</span>
+                </div>
+            </div>
+
+            <!-- Card de Séries -->
+            <div class="skill-card">
+                <h3>📺 Séries</h3>
+                
+                <div class="media-item">
+                    <img src="https://wallpapers.com/images/hd/teen-wolf-american-supernatural-teen-series-jx45ie8rgolmxho6.jpg" alt="Teen Wolf">
+                    <span>Teen Wolf</span>
+                </div>
+
+                <div class="media-item">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_723174-MLB45717055620_042021-O.webp" alt="Diários de um Vampiro">
+                    <span>Diários de um Vampiro</span>
+                </div>
+            </div>
+
+            <!-- Card de Músicas -->
+            <div class="skill-card">
+                <h3>🎵 Músicas</h3>
+                
+                <div class="media-item">
+                    <img src="https://i.scdn.co/image/ab67616d00001e0257c4eac77883a5d57dae079d" alt="Amor e Fé">
+                    <span>Amor e Fé</span>
+                </div>
+
+                <div class="media-item">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273e8b8abfdb87d56ea551c4fce" alt="Provavelmente">
+                    <span>Provavelmente</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Objetivos Futuros -->
-    <section id="futuro" class="section-blue">
+    <section id="futuro" class="section-white">
         <h2>Objetivos para o Futuro</h2>
         <p>Meu objetivo é fazer faculdade de tecnico ou Adm ano que vem, ter um trabalho bom, ajudar meus pais em casa.
              Futuramente ter uma casa ou uma apartemanto com muito esforço do trabalho  </p>
@@ -104,31 +141,15 @@
         <p>Instagram: <strong>@isaguerrax</strong></p>
         <p>email: <strong>IsaNotes@gmail.com</strong></p>
         <div class="social-icons">
-
             <div class="profile-img">
                 <img src="https://i.pinimg.com/1200x/62/92/39/629239facb565e1d09d7162eb2e3c6bc.jpg" alt="Isabela">
             </div>
-            <p> <strong> Obrigado por ter visto meu site</strong></p>
+            <p><strong>Obrigado por ter visto meu site</strong></p>
         </div>
     </footer>
 
+    <!-- Link para o arquivo JavaScript externo -->
     <script src="script.js"></script>
-    
-    <!-- Script para fazer o botão funcionar -->
-    <script>
-        const music = document.getElementById('bgMusic');
-        const btn = document.getElementById('musicBtn');
-
-        btn.addEventListener('click', function() {
-            if (music.paused) {
-                music.play();
-                btn.textContent = '⏸️ Pause';
-            } else {
-                music.pause();
-                btn.textContent = '▶️ Play ';
-            }
-        });
-    </script>
 
 </body>
 </html>

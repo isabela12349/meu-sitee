@@ -1,21 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // Função para o botão de download (Simulação)
-    const btnDownload = document.getElementById('btnDownload');
-    btnDownload.addEventListener('click', () => {
-        alert("O seu currículo está sendo preparado para download!");
-        // Exemplo: window.open('caminho/para/seu/pdf.pdf');
-    });
+// Aguarda o carregamento do DOM para evitar erros de execução
+document.addEventListener('DOMContentLoaded', function() {
+    const music = document.getElementById('bgMusic');
+    const btn = document.getElementById('musicBtn');
 
-    // Efeito simples de clique nos botões de redes sociais
-    const socialBtns = document.querySelectorAll('.social-btn');
-    socialBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const rede = e.target.innerText;
-            alert(`Redirecionando para o seu ${rede}...`);
+    // Valida se os elementos existem antes de aplicar o evento
+    if (btn && music) {
+        btn.addEventListener('click', function() {
+            if (music.paused) {
+                music.play();
+                btn.textContent = '⏸️ Pause';
+            } else {
+                music.pause();
+                btn.textContent = '▶️ Play ';
+            }
         });
-    });
-
-    // Log de carregamento profissional
-    console.log("Portfólio Profissional carregado com sucesso.");
+    }
 });
